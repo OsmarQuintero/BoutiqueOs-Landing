@@ -3,6 +3,11 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      http-equiv="Content-Security-Policy"
+      content="default-src 'self'; script-src 'self'; style-src 'self' https://fonts.googleapis.com; font-src https://fonts.gstatic.com; img-src 'self' data:; object-src 'none'; base-uri 'none'; form-action 'none'; frame-src 'none'; child-src 'none'; worker-src 'none'; manifest-src 'self'; media-src 'self'; connect-src 'none'; frame-ancestors 'none'; upgrade-insecure-requests; block-all-mixed-content"
+    />
+    <meta name="referrer" content="strict-origin-when-cross-origin" />
     <title>BoutiqueOS | El sistema para boutiques que quieren orden real</title>
     <meta
       name="description"
@@ -14,28 +19,63 @@
       href="https://fonts.googleapis.com/css2?family=Instrument+Sans:wght@400;500;600;700;800&display=swap"
       rel="stylesheet"
     />
-    <link rel="stylesheet" href="./styles.css" />
+    <link rel="stylesheet" href="./assets/css/styles.css" />
   </head>
   <body>
     <div class="page-shell">
       <header class="site-header">
         <a class="brand" href="#inicio" aria-label="Ir al inicio de BoutiqueOS">
-          <img src="./logo.png" alt="BoutiqueOS" class="brand-logo" />
+          <img src="./assets/img/logo.png" alt="BoutiqueOS" class="brand-logo" />
         </a>
         <nav class="site-nav">
           <a href="#producto">Producto</a>
           <a href="#modulos">Modulos</a>
           <a href="#planes">Planes</a>
+          <a href="#contacto">Contacto</a>
           <a href="#faq">FAQ</a>
+          <a
+            class="nav-cta"
+            href="./recorrido.html?utm_source=landing&utm_medium=cta&utm_campaign=boutiqueos_landing&utm_content=header_ver_recorrido"
+          >
+            Ver recorrido
+          </a>
         </nav>
         <div class="header-actions">
-          <a class="btn btn-outline" href="https://boutique-e1ayjuswh-osmarquinteros-projects.vercel.app" target="_blank" rel="noreferrer">Entrar</a>
-          <a class="btn btn-primary" href="https://boutique-e1ayjuswh-osmarquinteros-projects.vercel.app" target="_blank" rel="noreferrer">Agendar demo</a>
+          <a class="btn btn-outline" href="./planes.html#planes">Iniciar sesion</a>
+          <a class="btn btn-primary" href="#planes">Comprar plan</a>
         </div>
       </header>
 
       <main id="inicio">
         <section class="hero reveal-on-load">
+          <div class="commerce-scene hero-scene" aria-hidden="true">
+            <div class="scene-stars">
+              <span></span>
+              <span></span>
+              <span></span>
+              <span></span>
+              <span></span>
+              <span></span>
+            </div>
+
+            <div class="scene-glow"></div>
+
+            <div class="scene-globe">
+              <div class="globe-core"></div>
+              <div class="globe-lights">
+                <span class="light-cluster north-america"></span>
+                <span class="light-cluster europe"></span>
+                <span class="light-cluster latam"></span>
+              </div>
+              <svg class="globe-routes" viewBox="0 0 580 580" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path class="route route-a" d="M126 246C188 166 277 150 356 194C418 229 441 278 452 339" />
+                <path class="route route-b" d="M130 270C198 301 266 291 329 243C387 199 423 152 445 114" />
+                <path class="route route-c" d="M111 318C165 357 235 376 309 354C369 337 420 292 454 225" />
+                <path class="route route-d" d="M137 220C150 172 190 132 249 112C334 84 417 105 470 171" />
+              </svg>
+            </div>
+          </div>
+
           <div class="hero-copy">
             <span class="pill pill-blue">POS + inventario + clientes + reportes</span>
             <h1>Controla ventas, inventario y clientes desde un solo lugar.</h1>
@@ -45,23 +85,29 @@
               tomar decisiones diarias.
             </p>
             <div class="hero-actions">
-              <a class="btn btn-primary btn-lg" href="https://boutique-e1ayjuswh-osmarquinteros-projects.vercel.app" target="_blank" rel="noreferrer">
-                Probar demo
+              <a class="btn btn-primary btn-lg" href="#planes">
+                Comprar por Stripe
               </a>
-              <a class="btn btn-outline btn-lg" href="#producto">Ver el producto</a>
+              <a class="btn btn-outline btn-lg" href="./planes.html#planes">Iniciar sesion</a>
             </div>
             <div class="hero-notes">
               <span class="note-chip">Punto de venta rapido</span>
               <span class="note-chip">Inventario y clientes centralizados</span>
               <span class="note-chip">Reportes listos para operar</span>
+              <span class="note-chip">Activacion guiada despues del pago</span>
+            </div>
+            <div class="hero-proofline">
+              <span>Pago seguro por Stripe</span>
+              <span>Ruta clara hasta el sistema real</span>
+              <span>Soporte directo por WhatsApp</span>
             </div>
           </div>
 
           <div class="hero-preview">
-            <div class="app-preview">
+            <div class="app-preview preview-device">
               <div class="preview-topbar">
                 <div class="preview-brand">
-                  <img src="./logo.png" alt="" />
+                  <img src="./assets/img/logo.png" alt="" />
                   <div>
                     <strong>Boutique OS</strong>
                     <span>Panel principal</span>
@@ -107,12 +153,12 @@
                     <span class="panel-tag">Hoy</span>
                   </div>
                   <div class="chart-bars" aria-hidden="true">
-                    <span style="--bar-size: 52%"></span>
-                    <span style="--bar-size: 78%"></span>
-                    <span style="--bar-size: 64%"></span>
-                    <span style="--bar-size: 92%"></span>
-                    <span style="--bar-size: 70%"></span>
-                    <span style="--bar-size: 84%"></span>
+                    <span class="chart-bar chart-bar-1"></span>
+                    <span class="chart-bar chart-bar-2"></span>
+                    <span class="chart-bar chart-bar-3"></span>
+                    <span class="chart-bar chart-bar-4"></span>
+                    <span class="chart-bar chart-bar-5"></span>
+                    <span class="chart-bar chart-bar-6"></span>
                   </div>
                   <p>
                     Una vista simple para seguir ventas del dia, stock pendiente y el ritmo
@@ -148,6 +194,50 @@
           </div>
         </section>
 
+        <section class="trust-strip">
+          <article class="trust-card">
+            <span class="trust-label">Ventas mas fluidas</span>
+            <strong>Cobra, registra y sigue cada ticket desde el mismo flujo.</strong>
+          </article>
+          <article class="trust-card">
+            <span class="trust-label">Stock mas claro</span>
+            <strong>Detecta existencias y productos criticos antes de vender a ciegas.</strong>
+          </article>
+          <article class="trust-card">
+            <span class="trust-label">Operacion centralizada</span>
+            <strong>Productos, clientes y reportes conectados en una sola base.</strong>
+          </article>
+        </section>
+
+        <section class="roi-section">
+          <div class="section-copy compact">
+            <span class="pill">Valor real</span>
+            <h2>No se vende por “verse bonito”, se vende por ordenar la operacion.</h2>
+            <p>
+              La promesa comercial correcta no es tecnologia por tecnologia. Es vender con menos
+              friccion, entender mejor la tienda y tomar decisiones con mas claridad.
+            </p>
+          </div>
+
+          <div class="roi-grid">
+            <article class="roi-card">
+              <span class="card-kicker">Menos desorden</span>
+              <h3>Menos apuntes sueltos y menos doble trabajo.</h3>
+              <p>Ventas, clientes e inventario quedan conectados en el mismo flujo diario.</p>
+            </article>
+            <article class="roi-card">
+              <span class="card-kicker">Mas visibilidad</span>
+              <h3>Sabes mejor que paso hoy sin perder tiempo.</h3>
+              <p>El sistema deja mas claro el cierre del dia, productos criticos y ritmo de venta.</p>
+            </article>
+            <article class="roi-card">
+              <span class="card-kicker">Mejor decision</span>
+              <h3>Menos intuicion ciega, mas control operativo.</h3>
+              <p>Los reportes aterrizan mejor lo que conviene reponer, mover o seguir vendiendo.</p>
+            </article>
+          </div>
+        </section>
+
         <section class="product-section" id="producto">
           <div class="section-copy">
             <span class="pill">Producto</span>
@@ -179,39 +269,77 @@
         </section>
 
         <section class="captures-section" id="modulos">
-          <div class="section-copy">
-            <span class="pill pill-blue">Capturas</span>
-            <h2>Modulos reales para la operacion diaria de una boutique.</h2>
+          <div class="captures-topbar">
+            <div class="section-copy">
+              <span class="pill pill-blue">Vistas</span>
+              <h2>Vistas del producto para entender el flujo de una boutique.</h2>
+              <p>
+                El visitante puede revisar las muestras desde un carrusel rapido, sin tener que
+                bajar por toda la pagina para entender el sistema.
+              </p>
+            </div>
+            <div class="carousel-controls" aria-label="Controles del carrusel de vistas">
+              <button class="carousel-button" type="button" data-carousel-prev aria-label="Ver captura anterior">
+                &#8592;
+              </button>
+              <button class="carousel-button" type="button" data-carousel-next aria-label="Ver siguiente captura">
+                &#8594;
+              </button>
+            </div>
+          </div>
+
+          <div class="captures-carousel" data-captures-carousel>
+            <article class="capture-card">
+              <div class="capture-head">
+                <span>Vista general</span>
+                <span class="capture-badge">Recorrido comercial</span>
+              </div>
+              <img class="capture-image" src="./assets/img/screens/system-dashboard.png" alt="Vista general del panel de BoutiqueOS" />
+            </article>
+
+            <article class="capture-card">
+              <div class="capture-head">
+                <span>Punto de venta</span>
+                <span class="capture-badge">Vista de producto</span>
+              </div>
+              <img class="capture-image" src="./assets/img/screens/system-pos.png" alt="Vista del punto de venta de BoutiqueOS" />
+            </article>
+
+            <article class="capture-card">
+              <div class="capture-head">
+                <span>Reportes</span>
+                <span class="capture-badge">Vista de producto</span>
+              </div>
+              <img class="capture-image" src="./assets/img/screens/system-reports.png" alt="Vista de reportes de BoutiqueOS" />
+            </article>
+          </div>
+        </section>
+
+        <section class="workflow-section">
+          <div class="section-copy compact">
+            <span class="pill pill-blue">Como funciona</span>
+            <h2>Un flujo corto para vender con menos friccion.</h2>
             <p>
-              El sistema ya muestra flujos reales del negocio: productos, punto de venta e
-              inventario. La idea es que el visitante entienda rapido lo que puede hacer desde el
-              primer dia.
+              La idea no es meter mas pasos, sino quitar desorden en la operacion diaria de la
+              boutique.
             </p>
           </div>
 
-          <div class="captures-grid">
-            <article class="capture-card capture-real">
-              <div class="capture-head">
-                <span>Productos reales</span>
-                <span class="capture-badge">Captura real</span>
-              </div>
-              <img class="capture-image" src="./system-products.png" alt="Catalogo real de productos en BoutiqueOS" />
+          <div class="workflow-grid">
+            <article class="workflow-card">
+              <span class="workflow-step">01</span>
+              <h3>Carga tu catalogo</h3>
+              <p>Registra prendas, precios y stock inicial para tener base real desde el primer dia.</p>
             </article>
-
-            <article class="capture-card capture-real">
-              <div class="capture-head">
-                <span>POS con venta activa</span>
-                <span class="capture-badge">Captura real</span>
-              </div>
-              <img class="capture-image" src="./system-pos-live.png" alt="Punto de venta real con productos en el carrito" />
+            <article class="workflow-card">
+              <span class="workflow-step">02</span>
+              <h3>Vende y cobra rapido</h3>
+              <p>Usa el POS para agregar productos, asociar cliente y cerrar tickets sin brincar de pantalla.</p>
             </article>
-
-            <article class="capture-card capture-real">
-              <div class="capture-head">
-                <span>Inventario real</span>
-                <span class="capture-badge">Captura real</span>
-              </div>
-              <img class="capture-image" src="./system-inventory.png" alt="Modulo real de inventario en BoutiqueOS" />
+            <article class="workflow-card">
+              <span class="workflow-step">03</span>
+              <h3>Revisa que paso hoy</h3>
+              <p>Consulta reportes y movimientos para decidir reposicion, seguimiento y siguientes ventas.</p>
             </article>
           </div>
         </section>
@@ -219,7 +347,11 @@
         <section class="pricing" id="planes">
           <div class="section-copy compact">
             <span class="pill">Planes</span>
-            <h2>Empieza vendiendo orden y despues escala el SaaS.</h2>
+            <h2>Compra el plan base hoy y cobraremos por Stripe.</h2>
+            <p>
+              El objetivo no es solo venderte un sistema: es dejarte operando con orden, acceso
+              claro y acompanamiento desde el arranque.
+            </p>
           </div>
           <div class="pricing-grid">
             <article class="price-card">
@@ -232,9 +364,24 @@
                 <li>Reportes y corte diario</li>
                 <li>Soporte por WhatsApp</li>
               </ul>
-              <a class="btn btn-primary btn-block" href="https://boutique-e1ayjuswh-osmarquinteros-projects.vercel.app" target="_blank" rel="noreferrer">
-                Solicitar demo
+              <!-- En local apunta al backend; en produccion cambia localhost por tu dominio real -->
+              <a
+                class="btn btn-primary btn-block"
+                href="http://localhost:8080/api/checkout/start"
+                data-runtime-link="checkout"
+                rel="noopener noreferrer"
+                referrerpolicy="no-referrer"
+              >
+                Pagar con Stripe
               </a>
+              <p class="price-helper" id="stripe-link-pending">
+                Pago seguro por Stripe. Este boton abre el checkout desde el backend.
+              </p>
+              <div class="plan-reassurance">
+                <span>Activacion guiada</span>
+                <span>Sin vueltas raras</span>
+                <span>Soporte directo</span>
+              </div>
             </article>
             <article class="price-card featured">
               <span class="card-kicker">Expansion</span>
@@ -246,9 +393,143 @@
                 <li>Paneles por rol</li>
                 <li>Implementacion personalizada</li>
               </ul>
-              <a class="btn btn-outline btn-block" href="https://boutique-e1ayjuswh-osmarquinteros-projects.vercel.app" target="_blank" rel="noreferrer">
+              <a
+                class="btn btn-outline btn-block"
+                href="https://wa.me/528121918527?text=Hola,%20quiero%20hablar%20del%20plan%20de%20crecimiento%20de%20BoutiqueOS%20para%20varias%20sucursales"
+                target="_blank"
+                rel="noopener noreferrer"
+                referrerpolicy="no-referrer"
+              >
                 Hablar del roadmap
               </a>
+            </article>
+          </div>
+        </section>
+
+        <section class="commercial-close" id="cierre-comercial">
+          <div class="section-copy compact">
+            <span class="pill pill-blue">Cierre comercial</span>
+            <h2>Compra clara, activacion clara y entrada clara al sistema.</h2>
+            <p>
+              Aqui se elimina la friccion comercial: el cliente entiende que compra, que recibe,
+              cuanto tarda y como entra a operar sin quedarse en el limbo.
+            </p>
+          </div>
+
+          <div class="commercial-grid">
+            <article class="commercial-card">
+              <span class="card-kicker">Lo que recibes</span>
+              <h3>Acceso listo para vender con mas orden.</h3>
+              <ul>
+                <li>1 acceso base para tu boutique</li>
+                <li>POS, inventario, clientes y reportes</li>
+                <li>Configuracion inicial y acompanamiento de arranque</li>
+                <li>Soporte directo por WhatsApp</li>
+              </ul>
+            </article>
+
+            <article class="commercial-card">
+              <span class="card-kicker">Despues del pago</span>
+              <h3>El flujo sigue una ruta simple y profesional.</h3>
+              <ol class="commercial-steps">
+                <li>Pagas por Stripe</li>
+                <li>Se valida tu compra</li>
+                <li>Se activa tu acceso</li>
+                <li>Entras al sistema y empiezas a operar</li>
+              </ol>
+            </article>
+
+            <article class="commercial-card highlighted">
+              <span class="card-kicker">Ideal si hoy te pasa esto</span>
+              <h3>Tu boutique ya vende, pero la operacion sigue desordenada.</h3>
+              <p>
+                Si hoy cobras, apuntas, corriges stock a mano o no tienes claro que paso en el dia,
+                BoutiqueOS entra justo ahi: menos caos operativo y mas control real.
+              </p>
+              <a class="btn btn-primary btn-block" href="#contacto">Resolver dudas antes de comprar</a>
+            </article>
+          </div>
+        </section>
+
+        <section class="activation-section">
+          <div class="section-copy compact">
+            <span class="pill pill-blue">Promesa de arranque</span>
+            <h2>La venta no termina en el pago: empieza en la activacion.</h2>
+            <p>
+              Una parte fuerte del cierre comercial es que el cliente entienda que no compra una
+              caja cerrada. Compra una ruta clara para empezar a operar con orden.
+            </p>
+          </div>
+
+          <div class="activation-grid">
+            <article class="activation-card">
+              <span class="workflow-step">01</span>
+              <h3>Pagas</h3>
+              <p>El checkout se hace por Stripe para que el cobro sea claro y profesional.</p>
+            </article>
+            <article class="activation-card">
+              <span class="workflow-step">02</span>
+              <h3>Se activa tu acceso</h3>
+              <p>Se valida la compra y se prepara la entrada al sistema sin dejar al cliente en espera ciega.</p>
+            </article>
+            <article class="activation-card">
+              <span class="workflow-step">03</span>
+              <h3>Empiezas a operar</h3>
+              <p>Con acceso listo, soporte y flujo guiado para que el arranque se sienta firme.</p>
+            </article>
+          </div>
+        </section>
+
+        <section class="proof-section">
+          <div class="section-copy compact">
+            <span class="pill">Confianza</span>
+            <h2>Lo que una boutique espera sentir antes de comprar.</h2>
+            <p>
+              El cierre comercial no vive solo en el precio. Vive en la sensacion de control,
+              claridad y acompanamiento que transmite el producto.
+            </p>
+          </div>
+
+          <div class="proof-grid">
+            <article class="proof-card testimonial-card">
+              <span class="card-kicker">Testimonio tipo</span>
+              <blockquote>
+                “Lo que mas nos serviria seria dejar de vender con desorden, tener claro el stock
+                y revisar rapido que paso en el dia sin andar brincando entre notas.”
+              </blockquote>
+              <strong>Perfil ideal</strong>
+              <small>Boutique con operacion diaria y necesidad de control real.</small>
+            </article>
+
+            <article class="proof-card compare-card">
+              <span class="card-kicker">Antes vs despues</span>
+              <div class="compare-split">
+                <div>
+                  <strong>Antes</strong>
+                  <ul>
+                    <li>Ventas y stock por separado</li>
+                    <li>Seguimiento manual</li>
+                    <li>Poca claridad al cierre del dia</li>
+                  </ul>
+                </div>
+                <div>
+                  <strong>Despues</strong>
+                  <ul>
+                    <li>Operacion centralizada</li>
+                    <li>Cliente, ticket e inventario conectados</li>
+                    <li>Reportes listos para decidir rapido</li>
+                  </ul>
+                </div>
+              </div>
+            </article>
+
+            <article class="proof-card objection-card">
+              <span class="card-kicker">Objeciones resueltas</span>
+              <ul class="objection-list">
+                <li><strong>“¿Y si no le entiendo?”</strong> El flujo de entrada y activacion esta pensado para llegar con claridad.</li>
+                <li><strong>“¿Y si me quedo sola despues de pagar?”</strong> El plan ya contempla seguimiento por WhatsApp.</li>
+                <li><strong>“¿Y si mi boutique crece?”</strong> Ya existe ruta para escalar a varias sucursales.</li>
+              </ul>
             </article>
           </div>
         </section>
@@ -260,22 +541,203 @@
           </div>
           <div class="faq-list">
             <details open>
-              <summary>¿Que incluye la demo?</summary>
-              <p>La demo muestra acceso al sistema, modulo de productos, punto de venta, inventario y vistas base del panel administrativo.</p>
+              <summary>¿Como se realiza el pago?</summary>
+              <p>El plan base se paga por Stripe con un enlace de cobro seguro. Despues del pago se agenda activacion y acceso.</p>
             </details>
             <details>
               <summary>¿Para que tipo de negocio esta pensado?</summary>
               <p>Esta orientado a boutiques y tiendas de ropa que necesitan vender rapido, controlar stock y tener mejor seguimiento de clientes.</p>
             </details>
             <details>
+              <summary>¿Que pasa despues del pago?</summary>
+              <p>Se confirma la compra, se configura tu acceso y se da seguimiento para dejar lista la operacion inicial.</p>
+            </details>
+            <details>
               <summary>¿Que beneficios resuelve en el dia a dia?</summary>
               <p>Reduce el desorden operativo, centraliza informacion clave y facilita revisar ventas, existencias y movimiento comercial desde un solo panel.</p>
             </details>
+            <details>
+              <summary>¿Por que no simplemente seguir con notas o Excel?</summary>
+              <p>Porque cuando la boutique crece, los errores operativos cuestan mas: stock mal actualizado, ventas poco claras y seguimiento flojo de clientes. Aqui todo vive mas conectado.</p>
+            </details>
+            <details>
+              <summary>¿Como se si este plan me conviene hoy?</summary>
+              <p>Si ya vendes y el problema no es conseguir mas trabajo sino ordenar mejor la operacion diaria, este es justo el tipo de punto donde BoutiqueOS hace sentido.</p>
+            </details>
+          </div>
+        </section>
+
+        <section class="contact-section" id="contacto">
+          <div class="contact-card">
+            <div class="contact-copy">
+              <span class="pill pill-blue">Contacto</span>
+              <h2>Habla directo si quieres resolver dudas antes de comprar.</h2>
+              <p>
+                Si quieres validar detalles, tiempos de activacion o el plan para varias sucursales,
+                escribe por WhatsApp y lo revisamos directo.
+              </p>
+              <div class="contact-cta">
+                <a
+                  class="btn btn-whatsapp btn-lg"
+                  href="https://wa.me/528121918527?text=Hola,%20quiero%20resolver%20dudas%20antes%20de%20comprar%20BoutiqueOS"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  referrerpolicy="no-referrer"
+                >
+                  Resolver dudas por WhatsApp
+                </a>
+                <p class="contact-helper">Respuesta directa para compra, activacion y seguimiento comercial.</p>
+              </div>
+            </div>
+
+            <div class="contact-grid">
+              <a class="contact-item" href="tel:+528121918527">
+                <span class="contact-label">WhatsApp / Telefono</span>
+                <strong>+52 8121918527</strong>
+                <small>Canal mas rapido para agendar, resolver dudas y dar seguimiento.</small>
+              </a>
+
+              <a class="contact-item" href="mailto:osmdigitalweb@gmail.com">
+                <span class="contact-label">Correo</span>
+                <strong>osmdigitalweb@gmail.com</strong>
+                <small>Ideal para cotizaciones, informacion general o seguimiento mas formal.</small>
+              </a>
+            </div>
           </div>
         </section>
       </main>
+
     </div>
 
-    <script src="./script.js"></script>
+    <footer class="site-footer">
+      <div class="footer-inner">
+        <div class="footer-spotlight">
+          <div class="footer-spotlight-copy">
+            <span class="footer-kicker">Listo para vender con mas orden</span>
+            <strong>Compra hoy, activa tu acceso y convierte una operacion desordenada en un flujo mucho mas claro.</strong>
+            <p>
+              BoutiqueOS no busca solo verse bien: busca que la boutique entienda el valor,
+              compre con confianza y tenga un camino claro hasta el sistema real.
+            </p>
+          </div>
+
+          <div class="footer-spotlight-actions">
+            <a class="btn btn-primary btn-lg footer-primary-cta" href="#planes">Comenzar con BoutiqueOS</a>
+            <a class="btn btn-outline btn-lg footer-secondary-cta" href="./planes.html#planes">Iniciar sesion</a>
+          </div>
+        </div>
+
+        <div class="footer-metrics">
+          <article class="footer-metric">
+            <span>Flujo</span>
+            <strong>POS + inventario + clientes</strong>
+          </article>
+          <article class="footer-metric">
+            <span>Enfoque</span>
+            <strong>Boutiques y tiendas de ropa</strong>
+          </article>
+          <article class="footer-metric">
+            <span>Activacion</span>
+            <strong>Compra, configuracion y seguimiento</strong>
+          </article>
+        </div>
+
+        <div class="footer-main">
+          <div class="footer-brand-column">
+            <a class="footer-brand" href="#inicio" aria-label="Ir al inicio de BoutiqueOS">
+              <img src="./assets/img/logo.png" alt="BoutiqueOS" class="footer-logo" />
+            </a>
+            <p class="footer-brand-copy">
+              La base operativa para boutiques que quieren vender rapido, entender su stock y
+              tomar decisiones con datos mas claros.
+            </p>
+            <div class="footer-signals">
+              <span>Checkout por Stripe</span>
+              <span>Soporte por WhatsApp</span>
+              <span>Implementacion guiada</span>
+            </div>
+          </div>
+
+          <div class="footer-columns">
+            <div class="footer-column">
+              <span class="footer-heading">Producto</span>
+              <div class="footer-links">
+                <a href="#producto">Que resuelve</a>
+                <a href="#modulos">Vistas del sistema</a>
+                <a href="./planes.html?utm_source=landing&utm_medium=cta&utm_campaign=boutiqueos_landing&utm_content=footer_planes">Planes y acceso</a>
+                <a href="#planes">Planes</a>
+              </div>
+            </div>
+
+            <div class="footer-column">
+              <span class="footer-heading">Operacion</span>
+              <div class="footer-links">
+                <a href="#modulos">POS y catalogo</a>
+                <a href="#modulos">Inventario y clientes</a>
+                <a href="#faq">Preguntas frecuentes</a>
+                <a href="#contacto">Activacion y seguimiento</a>
+              </div>
+            </div>
+
+            <div class="footer-column">
+              <span class="footer-heading">Contacto</span>
+              <div class="footer-links">
+                <a href="tel:+528121918527">+52 8121918527</a>
+                <a href="mailto:osmdigitalweb@gmail.com">osmdigitalweb@gmail.com</a>
+                <a
+                  href="https://wa.me/528121918527?text=Hola,%20quiero%20informacion%20de%20BoutiqueOS"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  referrerpolicy="no-referrer"
+                >
+                  Abrir WhatsApp
+                </a>
+                <a href="#contacto">Hablar antes de comprar</a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="footer-bottom">
+          <div class="footer-meta">
+            <span>Mexico</span>
+            <span>Espanol</span>
+            <span>BoutiqueOS</span>
+          </div>
+          <div class="footer-legal">
+            <a href="#planes">Terminos comerciales</a>
+            <a href="#faq">FAQ</a>
+            <a href="#contacto">Soporte</a>
+          </div>
+          <div class="footer-social">
+            <a
+              href="https://wa.me/528121918527?text=Hola,%20quiero%20informacion%20de%20BoutiqueOS"
+              target="_blank"
+              rel="noopener noreferrer"
+              referrerpolicy="no-referrer"
+              aria-label="WhatsApp de BoutiqueOS"
+            >
+              WA
+            </a>
+            <a href="mailto:osmdigitalweb@gmail.com" aria-label="Correo de BoutiqueOS">EM</a>
+            <a href="tel:+528121918527" aria-label="Telefono de BoutiqueOS">TEL</a>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <a
+      class="floating-whatsapp"
+      href="https://wa.me/528121918527?text=Hola,%20quiero%20resolver%20dudas%20antes%20de%20comprar%20BoutiqueOS"
+      target="_blank"
+      rel="noopener noreferrer"
+      referrerpolicy="no-referrer"
+      aria-label="Abrir WhatsApp para resolver dudas antes de comprar BoutiqueOS"
+    >
+      <span class="floating-whatsapp-label">Resolver dudas</span>
+      <span class="floating-whatsapp-icon" aria-hidden="true">WA</span>
+    </a>
+
+    <script src="./assets/js/script.js"></script>
   </body>
 </html>

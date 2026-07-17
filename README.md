@@ -5,8 +5,12 @@ Landing separado para vender Boutique OS sin mezclar marketing con el panel SaaS
 ## Estructura
 
 - `index.html`: pagina principal
-- `styles.css`: estilos del landing
-- `script.js`: animaciones ligeras de entrada
+- `demo.html`, `planes.html`, `recorrido.html`: paginas secundarias del landing
+- `assets/css/styles.css`: estilos compartidos
+- `assets/js/script.js`: animaciones del landing principal
+- `assets/js/recorrido.js`: interaccion del recorrido
+- `assets/img/logo.png`: logotipo
+- `assets/img/screens/`: capturas del sistema
 
 ## Probar local
 

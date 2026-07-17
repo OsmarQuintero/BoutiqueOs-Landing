@@ -1,0 +1,269 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      http-equiv="Content-Security-Policy"
+      content="default-src 'self'; script-src 'self'; style-src 'self' https://fonts.googleapis.com; font-src https://fonts.gstatic.com; img-src 'self' data:; object-src 'none'; base-uri 'none'; form-action 'none'; frame-src 'none'; child-src 'none'; worker-src 'none'; manifest-src 'self'; media-src 'self'; connect-src 'none'; frame-ancestors 'none'; upgrade-insecure-requests; block-all-mixed-content"
+    />
+    <meta name="referrer" content="strict-origin-when-cross-origin" />
+    <title>BoutiqueOS | Recorrido del producto</title>
+    <meta
+      name="description"
+      content="Revisa el recorrido visual de BoutiqueOS con capturas grandes y una explicacion corta de cada vista."
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Instrument+Sans:wght@400;500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./assets/css/styles.css" />
+  </head>
+  <body>
+    <div class="tour-shell">
+      <header class="site-header">
+        <a class="brand" href="./index.html" aria-label="Volver al landing de BoutiqueOS">
+          <img src="./assets/img/logo.png" alt="BoutiqueOS" class="brand-logo" />
+        </a>
+        <nav class="site-nav">
+          <a href="./index.html#producto">Producto</a>
+          <a href="./index.html#modulos">Modulos</a>
+          <a href="./index.html#planes">Planes</a>
+          <a href="./index.html#contacto">Contacto</a>
+          <a href="./index.html#faq">FAQ</a>
+          <a class="nav-cta" href="./recorrido.html">Ver recorrido</a>
+        </nav>
+        <div class="header-actions">
+          <a class="btn btn-outline" href="./planes.html#planes">Ver planes de pago</a>
+          <a class="btn btn-primary" href="http://localhost:4200/" data-runtime-link="frontend" rel="noopener noreferrer" referrerpolicy="no-referrer">Iniciar sesion</a>
+        </div>
+      </header>
+
+      <main class="tour-stack">
+        <section class="tour-hero">
+          <div class="tour-copy">
+            <span class="pill pill-blue">Recorrido visual</span>
+            <h1>Mira BoutiqueOS con capturas grandes y explicacion breve.</h1>
+            <p>
+              Esta vista resume el flujo principal del sistema para que el cliente entienda rapido
+              como se ve operar, vender y revisar resultados dentro de la plataforma.
+            </p>
+            <div class="tour-actions">
+              <a class="btn btn-primary btn-lg" href="http://localhost:4200/" data-runtime-link="frontend" rel="noopener noreferrer" referrerpolicy="no-referrer">Iniciar sesion</a>
+              <a class="btn btn-outline btn-lg" href="./planes.html">Ver planes de pago</a>
+            </div>
+          </div>
+
+          <div class="tour-aside">
+            <div class="tour-aside-card">
+              <strong>Ideal para demostracion comercial</strong>
+              <p>Las capturas van mas grandes para que el visitante entienda el producto sin esfuerzo.</p>
+            </div>
+            <div class="tour-signals">
+              <span>Panel principal</span>
+              <span>Punto de venta</span>
+              <span>Reportes operativos</span>
+            </div>
+          </div>
+        </section>
+
+        <section class="tour-carousel-shell" aria-label="Recorrido de BoutiqueOS">
+          <div class="tour-carousel-stage" data-tour-carousel>
+            <div class="tour-carousel-track">
+              <article class="tour-card is-active" data-tour-slide>
+                <div class="tour-card-media">
+                  <img src="./assets/img/screens/system-dashboard.png" alt="Panel principal de BoutiqueOS con resumen general del negocio" />
+                </div>
+                <div class="tour-card-copy">
+                  <span class="tour-badge">Vista general</span>
+                  <h2>Panel principal para ver el negocio en segundos.</h2>
+                  <p>
+                    Aqui el usuario revisa ventas del dia, actividad reciente y el estado general de la
+                    boutique sin tener que brincar entre modulos.
+                  </p>
+                  <ul>
+                    <li>Resumen rapido de la operacion diaria</li>
+                    <li>Accesos directos a tareas clave</li>
+                    <li>Lectura clara para administracion y piso de venta</li>
+                  </ul>
+                </div>
+              </article>
+
+              <article class="tour-card" data-tour-slide>
+                <div class="tour-card-media">
+                  <img src="./assets/img/screens/system-pos.png" alt="Pantalla del punto de venta de BoutiqueOS" />
+                </div>
+                <div class="tour-card-copy">
+                  <span class="tour-badge">Punto de venta</span>
+                  <h2>Cobro agil con productos, cliente y ticket en el mismo flujo.</h2>
+                  <p>
+                    El modulo de ventas esta pensado para atender rapido, registrar bien cada ticket y
+                    dejar el inventario actualizado al momento.
+                  </p>
+                  <ul>
+                    <li>Busqueda simple de productos</li>
+                    <li>Asociacion del cliente durante la venta</li>
+                    <li>Cierre rapido para tienda fisica</li>
+                  </ul>
+                </div>
+              </article>
+
+              <article class="tour-card" data-tour-slide>
+                <div class="tour-card-media">
+                  <img src="./assets/img/screens/system-reports.png" alt="Pantalla de reportes de BoutiqueOS" />
+                </div>
+                <div class="tour-card-copy">
+                  <span class="tour-badge">Reportes</span>
+                  <h2>Datos listos para tomar decisiones sin hojas sueltas.</h2>
+                  <p>
+                    Esta vista ayuda a revisar desempeno, detectar movimientos relevantes y entender
+                    mejor como va la boutique con informacion mas aterrizada.
+                  </p>
+                  <ul>
+                    <li>Lectura visual del rendimiento</li>
+                    <li>Seguimiento de ventas y tendencias</li>
+                    <li>Base para reposicion y control comercial</li>
+                  </ul>
+                </div>
+              </article>
+            </div>
+
+            <div class="tour-slide-nav" aria-hidden="false">
+              <button class="tour-slide-btn" type="button" aria-label="Vista anterior" data-tour-prev>&lsaquo;</button>
+              <button class="tour-slide-btn" type="button" aria-label="Siguiente vista" data-tour-next>&rsaquo;</button>
+            </div>
+          </div>
+
+          <div class="tour-slide-meta">
+            <div class="tour-slide-dots" role="tablist" aria-label="Seleccionar vista del recorrido">
+              <button class="tour-slide-dot is-active" type="button" role="tab" aria-selected="true" aria-label="Ir a vista 1" data-tour-dot="0"></button>
+              <button class="tour-slide-dot" type="button" role="tab" aria-selected="false" aria-label="Ir a vista 2" data-tour-dot="1"></button>
+              <button class="tour-slide-dot" type="button" role="tab" aria-selected="false" aria-label="Ir a vista 3" data-tour-dot="2"></button>
+            </div>
+            <span class="tour-slide-count" data-tour-count>01 / 03</span>
+          </div>
+        </section>
+      </main>
+    </div>
+
+    <footer class="site-footer">
+      <div class="footer-inner">
+        <div class="footer-spotlight">
+          <div class="footer-spotlight-copy">
+            <span class="footer-kicker">Listo para vender con mas orden</span>
+            <strong>Un cierre de landing que se siente a producto serio, no a pagina improvisada.</strong>
+            <p>
+              BoutiqueOS conecta ventas, inventario, clientes y seguimiento comercial en una
+              experiencia clara para boutiques que ya no quieren operar a ciegas.
+            </p>
+          </div>
+
+          <div class="footer-spotlight-actions">
+            <a class="btn btn-primary btn-lg footer-primary-cta" href="./index.html#planes">Comenzar con BoutiqueOS</a>
+            <a class="btn btn-outline btn-lg footer-secondary-cta" href="http://localhost:4200/" data-runtime-link="frontend" rel="noopener noreferrer" referrerpolicy="no-referrer">Iniciar sesion</a>
+          </div>
+        </div>
+
+        <div class="footer-metrics">
+          <article class="footer-metric">
+            <span>Flujo</span>
+            <strong>POS + inventario + clientes</strong>
+          </article>
+          <article class="footer-metric">
+            <span>Enfoque</span>
+            <strong>Boutiques y tiendas de ropa</strong>
+          </article>
+          <article class="footer-metric">
+            <span>Activacion</span>
+            <strong>Compra, configuracion y seguimiento</strong>
+          </article>
+        </div>
+
+        <div class="footer-main">
+          <div class="footer-brand-column">
+            <a class="footer-brand" href="./index.html#inicio" aria-label="Ir al inicio de BoutiqueOS">
+              <img src="./assets/img/logo.png" alt="BoutiqueOS" class="footer-logo" />
+            </a>
+            <p class="footer-brand-copy">
+              La base operativa para boutiques que quieren vender rapido, entender su stock y
+              tomar decisiones con datos mas claros.
+            </p>
+            <div class="footer-signals">
+              <span>Checkout por Stripe</span>
+              <span>Soporte por WhatsApp</span>
+              <span>Implementacion guiada</span>
+            </div>
+          </div>
+
+          <div class="footer-columns">
+            <div class="footer-column">
+              <span class="footer-heading">Producto</span>
+              <div class="footer-links">
+                <a href="./index.html#producto">Que resuelve</a>
+                <a href="./index.html#modulos">Vistas del sistema</a>
+                <a href="./planes.html#planes">Planes y acceso</a>
+                <a href="./index.html#planes">Planes</a>
+              </div>
+            </div>
+
+            <div class="footer-column">
+              <span class="footer-heading">Operacion</span>
+              <div class="footer-links">
+                <a href="./index.html#modulos">POS y catalogo</a>
+                <a href="./index.html#modulos">Inventario y clientes</a>
+                <a href="./index.html#faq">Preguntas frecuentes</a>
+                <a href="./index.html#contacto">Activacion y seguimiento</a>
+              </div>
+            </div>
+
+            <div class="footer-column">
+              <span class="footer-heading">Contacto</span>
+              <div class="footer-links">
+                <a href="tel:+528121918527">+52 8121918527</a>
+                <a href="mailto:osmdigitalweb@gmail.com">osmdigitalweb@gmail.com</a>
+                <a
+                  href="https://wa.me/528121918527?text=Hola,%20quiero%20informacion%20de%20BoutiqueOS"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  referrerpolicy="no-referrer"
+                >
+                  Abrir WhatsApp
+                </a>
+                <a href="./index.html#contacto">Hablar antes de comprar</a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="footer-bottom">
+          <div class="footer-meta">
+            <span>Mexico</span>
+            <span>Espanol</span>
+            <span>BoutiqueOS</span>
+          </div>
+          <div class="footer-legal">
+            <a href="./index.html#planes">Terminos comerciales</a>
+            <a href="./index.html#faq">FAQ</a>
+            <a href="./index.html#contacto">Soporte</a>
+          </div>
+          <div class="footer-social">
+            <a
+              href="https://wa.me/528121918527?text=Hola,%20quiero%20informacion%20de%20BoutiqueOS"
+              target="_blank"
+              rel="noopener noreferrer"
+              referrerpolicy="no-referrer"
+              aria-label="WhatsApp de BoutiqueOS"
+            >
+              WA
+            </a>
+            <a href="mailto:osmdigitalweb@gmail.com" aria-label="Correo de BoutiqueOS">EM</a>
+            <a href="tel:+528121918527" aria-label="Telefono de BoutiqueOS">TEL</a>
+          </div>
+        </div>
+      </div>
+    </footer>
+    <script src="./assets/js/recorrido.js"></script>
+  </body>
+</html>
